@@ -5,8 +5,11 @@
   <title>چندہ دینے والوں کی نیتیں</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    body, input, select, textarea, button {
+      font-family: 'Noto Nastaliq Urdu', serif !important;
+    }
+
     body {
-      font-family: 'Noto Nastaliq Urdu', serif;
       direction: rtl;
       text-align: right;
       background-color: #f9f9f9;
@@ -17,14 +20,14 @@
       width: 70%;
       margin: auto;
       background: #fff;
-      padding: 20px;
+      padding: 10px;
       border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
     }
     h1 {
       text-align: center;
       color: #2c3e50;
-      font-weight: 700;
+      font-weight: 1000;
     }
     .logo {
       display: block;
@@ -35,39 +38,50 @@
     }
     label {
       display: block;
-      margin: 10px 0 5px;
+      margin: 10px 0 10px;
       font-weight: bold;
     }
     input, select, textarea {
       width: 100%;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-family: 'Noto Nastaliq Urdu', serif;
+      padding: 12px;
+      font-size: 18;
+      border: 2px solid #444;
+      border-radius: 07px;
+      background-color: #fff;
+      color: #000;
+      box-sizing: border-box;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #16a085;
+      outline: none;
+      background-color: #fdfdfd;
+    }
+    .big-input {
+      font-size: 12px;
+      font-weight: bold;
     }
     button {
       background: #2c3e50;
       color: #fff;
       border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
+      padding: 10px 10px;
+      border-radius: 5%;
       cursor: pointer;
-      margin-top: 15px;
-      font-family: 'Noto Nastaliq Urdu', serif;
+      margin-top: 10px;
     }
     button:hover {
       background: #16a085;
     }
     .sheet-link {
-      margin-top: 20px;
+      margin-top: 10px;
       text-align: center;
     }
     .sheet-link a {
       display: inline-block;
       background: #16a085;
       color: white;
-      padding: 10px 15px;
-      border-radius: 5px;
+      padding: 10px 10px;
+      border-radius: 0px;
       text-decoration: none;
     }
     .sheet-link a:hover {
@@ -85,17 +99,27 @@
 <body>
   <div class="container">
     <img src="images/dd.jpeg" alt="چندہ دینے والوں کی نیتیں" class="logo"> 
-    <h1>چندہ دینے والوں کانیتیں</h1>
+    <h1>چندہ دینے والوں کی نیتیں</h1>
+    صدائے قرآن اکیڈمی (مشن اصلاحِ امت) کا مقصد
+    
+    :
+قرآن و سنت کی روشنی میں لوگوں کی تربیت کرنا۔
+دینی و اخلاقی اصلاح کے ذریعے فرد اور معاشرے کو بہتر بنانا۔
+بچوں اور بڑوں کو قرآنِ کریم کی تلاوت، تجوید اور حفظ کی تعلیم دینا۔
+امتِ مسلمہ کو قرآن و سنت کی اصل تعلیمات سے جوڑنا۔
+فرقہ واریت اور بدعات سے بچا کر اتحاد و یکجہتی کو فروغ دینا۔
+نوجوان نسل کو دین سے قریب کرنا اور ان کے کردار کی تعمیر کرنا۔
+اصلاحِ معاشرہ کے لیے تعلیمی و تربیتی پروگرام ترتیب دینا۔
 
     <form action="https://formspree.io/f/your-id" method="POST">
       <label>نام ڈونر:</label>
-      <input type="text" name="donor_name" required>
+      <input type="text" name="donor_name" class="big-input" required>
 
       <label>والد کا نام:</label>
-      <input type="text" name="father_name" required>
+      <input type="text" name="father_name" class="big-input" required>
 
       <label>ڈویژن:</label>
-      <select name="division" required>
+      <select name="division" class="big-input" required>
         <option value="">منتخب کریں</option>
         <option value="multan">ملتان</option>
         <option value="lahore">لاہور</option>
@@ -105,10 +129,10 @@
       </select>
 
       <label>ایڈرس:</label>
-      <input type="text" name="address" required>
+      <input type="text" name="address" class="big-input" required>
 
       <label>صدقات کی کیفیت:</label>
-      <select name="charity_condition" required>
+      <select name="charity_condition" class="big-input" required>
         <option value="">منتخب کریں</option>
         <option value="zakat">زکوۃ</option>
         <option value="sadaqat">صدقات</option>
@@ -116,22 +140,17 @@
       </select>
 
       <label for="donation_date">چندہ دینے کی تاریخ:</label>
-      <input type="date" name="donation_date" id="donation_date" required>
+      <input type="date" name="donation_date" id="donation_date" class="big-input" required>
 
       <label>ریمارکس:</label>
-      <textarea name="remarks"></textarea>
+      <textarea name="remarks" class="big-input"></textarea>
 
       <button type="submit">جمع کریں</button>
     </form>
-    </div>
-    </div>
-
-  <footer>
-    
-    ہمارا مقصد دین مسلمانوں کے بچوں کو ان کی تعلیم قرآن دینا ہے تاکہ وہ دین ودنیا میں کامیاب ہوسکے
-  
-</footer>
+    <footer>
+      ہمارا مقصد یہ ہے کہ مسلمانوں کے بچوں کو قرآنِ کریم کی صحیح تعلیم دی جائے تاکہ وہ دین و دنیا دونوں میں کامیاب 
+      زندگی گزار سکیں اور ایک باعمل مسلمان کے طور پر معاشرے میں اپنا مثبت کردار ادا کریں۔
+    </footer>
+  </div>
 </body>
 </html>
-
-
